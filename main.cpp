@@ -36,9 +36,9 @@ int main() {
 	listA.push_back(  2793);
 	listA.push_back( 84267);
 	
-	auto mf = ListF::fmap<int, std::string>(findLastDigit);
+	auto mappedFunction = ListF::fmap<int, std::string>(findLastDigit);
 	
-	List<std::string> listB = mf(listA);
+	List<std::string> listB = mappedFunction(listA);
 	
 	std::cout <<"Size: " << listB.size() << std::endl << std::endl << "Content: " << std :: endl;
 
