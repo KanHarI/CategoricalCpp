@@ -10,12 +10,12 @@ class Comonad : public Functor<W> {
 public:
 	template <class T>
 	static T extract(const W<T>& w) {
-		return w._extract();
+		return W<T>::_extract(w);
 	}
 
 	template <class T>
 	static W<W<T>> duplicate(const W<T>& w) {
-		return w._duplicate();
+		return W<T>::_duplicate();
 	}
 }
 
