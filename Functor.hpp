@@ -4,7 +4,7 @@
 
 #include <functional>
 
-template <template <class FT> class F>
+template <template <class TF> class F>
 class Functor {
 public:
 	template <class T1, class T2>

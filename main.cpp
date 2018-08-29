@@ -78,7 +78,23 @@ void testMonad() {
 	}
 }
 
+void testMonad2() {
+	List<int> listA;
+	listA.push_back( 75341);
+	listA.push_back(919343);
+	listA.push_back(  2793);
+	listA.push_back( 84267);
+
+	List<std::string> listB = ListM::bind<int, std::string>(listA, findAllDigits);
+
+	std::cout <<"Size: " << listB.size() << std::endl << std::endl << "Content: " << std :: endl;
+
+	for (auto c : listB) {
+		std::cout << c << std::endl;
+	}	
+}
+
 int main() {
-	testMonad();
+	testMonad2();
 	return 0;
 }
